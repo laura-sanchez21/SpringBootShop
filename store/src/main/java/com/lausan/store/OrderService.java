@@ -1,9 +1,13 @@
 package com.lausan.store;
 
 public class OrderService {
-    public void placeOrder() {
-        PaymentService paymentService = new StripePaymentService();
-        paymentService.processPayment(10);
+    private PaymentService paymentService;
+
+    public OrderService(PaymentService paymentService) {
+        this.paymentService = paymentService;
     }
 
+    public void placeOrder() {
+        paymentService.processPayment(10);
+    }
 }
