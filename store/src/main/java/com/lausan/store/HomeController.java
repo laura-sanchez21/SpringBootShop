@@ -1,15 +1,17 @@
 package com.lausan.store;
-  
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
-    @RequestMapping("/test")
-    public @ResponseBody String test() {
-        System.out.println(">>> test() controller called");
-        return "This is a test response";
+    @Value("${spring.application.name}")
+    private String appName;
+
+    @RequestMapping("/")
+    public String index() {
+        System.out.println("appName: " + appName);
+        return "index";
     }
 }
-
