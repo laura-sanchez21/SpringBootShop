@@ -1,0 +1,16 @@
+spring:
+    application:
+        name: store
+stripe:
+  apiUrl: https://api.stripe.com
+  timeout: 1000
+  enabled: true
+  currencies: USD,EUR,GBP
+
+
+#originally in application.properties
+# spring.application.name=store
+# stripe.apiUrl=https://api.stripe.com
+# stripe.enabled=true
+# stripe.timeout=1000
+# stripe.supported-currencies=USD,EUR,GBP
