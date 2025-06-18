@@ -7,6 +7,8 @@ stripe:
   enabled: true
   currencies: USD,EUR,GBP
 
+payment-gateway: paypal
+
 
 #originally in application.properties
 # spring.application.name=store

@@ -2,7 +2,7 @@ package com.lausan.store;
 
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class NotificationManager {
     private final NotificationService notificationService;
 
